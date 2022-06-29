@@ -202,7 +202,7 @@ def main():
     )
     asker.ask_ok(element_creator.get_relative_filenames())
     element_creator.create()
-    print(f"Всё создал и весь такой молодец!")
+    print("Всё создал и весь такой молодец!")
 
 
 if __name__ == "__main__":
