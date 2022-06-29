@@ -171,6 +171,7 @@ class AskParams:
 
 
 class ElementFilesCreator:
+    """Handles files creation"""
     def __init__(self, element: Element):
         self._element = element
         self._file_creators: list[FileCreator] = []
