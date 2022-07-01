@@ -16,7 +16,7 @@
 from abc import abstractmethod, ABC
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Literal, TypeAlias, Iterable
+from typing import Literal, TypeAlias, Iterable, Type
 
 
 SRC_DIR = Path(__file__).parent / "src"
@@ -180,7 +180,7 @@ class ElementFilesCreator:
         for file_creator in self._file_creators:
             file_creator.create()
 
-    def register_file_creators(self, *file_creators: type[FileCreator]):
+    def register_file_creators(self, *file_creators: Type[FileCreator]):
         for fc in file_creators:
             self._file_creators.append(fc(
                 element=self._element
